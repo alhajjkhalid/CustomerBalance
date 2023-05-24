@@ -1,6 +1,7 @@
 import React from "react";
 
 const Dashboard = ({ transactions }) => {
+  console.log(transactions);
   return (
     <>
       <div className="w-full max-w-xl mx-auto mt-4 bg-white rounded-lg shadow-md overflow-hidden">
@@ -19,8 +20,21 @@ const Dashboard = ({ transactions }) => {
                 </th>
               </tr>
             </thead>
-            <tbody className="">
-
+            <tbody className="bg-white divide-y divide-gray-200">
+              {transactions.map((transaction, index) => {
+                <tr key={index}>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <div className="text-sm text-gray-900">
+                      {transaction.timestamp}
+                    </div>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <div className="text-sm text-gray-900">
+                      {transaction.amount}
+                    </div>
+                  </td>
+                </tr>;
+              })}
             </tbody>
           </table>
         </div>

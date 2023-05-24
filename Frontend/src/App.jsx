@@ -9,14 +9,14 @@ import "./App.css";
 
 function App() {
   const [year, setYear] = useState("2022");
-  const [month, setMonth] = useState("1");
+  const [month, setMonth] = useState("");
   const [filteredTransactions, setFilteredTransactions] = useState([]);
 
   useEffect(() => {
     const filtered = transactions.filter((transaction) => {
-      const transactionYear = transaction.timestamp.split("-");
-      const transactionMonth = transaction.timestamp.split("-");
-      return transactionYear === year && transactionMonth === month;
+      const transactionVar = transaction.timestamp.split("-");
+
+      return transactionVar[0] === year && transactionVar[1] === month;
     });
     setFilteredTransactions(filtered);
   }, [year, month]);
@@ -26,16 +26,17 @@ function App() {
   };
 
   const handleMonthChange = (event) => {
+    console.log(event.target.value);
     setMonth(event.target.value);
   };
   return (
     <>
-      <div data-testid="hi">
+      <div>
         <Filter
           handleYearChange={handleYearChange}
           handleMonthChange={handleMonthChange}
         />
-        <Dashboard />
+        <Dashboard transactions={filteredTransactions} />
       </div>
     </>
   );
