@@ -10,7 +10,7 @@ import "./App.css";
 
 function App() {
   const [year, setYear] = useState("2022");
-  const [month, setMonth] = useState("");
+  const [month, setMonth] = useState("1");
   const [filteredTransactions, setFilteredTransactions] = useState([]);
   const [cumulative, setcumulative] = useState([]);
 
