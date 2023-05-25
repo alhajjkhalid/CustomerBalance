@@ -52,7 +52,10 @@ const transactions = [
   { amount: 3000, timestamp: "2022-8-01" },
   { amount: -180, timestamp: "2022-8-06" },
   { amount: -510, timestamp: "2022-8-15" },
-  { amount: -660, timestamp: "2022-8-23" },
+  { amount: -660, timestamp: "2022-8-16" },
+  { amount: -370, timestamp: "2022-8-17" },
+  { amount: -180, timestamp: "2022-8-19" },
+  { amount: -510, timestamp: "2022-8-21" },
   { amount: -370, timestamp: "2022-8-31" },
 
   // Transactions for September 2022

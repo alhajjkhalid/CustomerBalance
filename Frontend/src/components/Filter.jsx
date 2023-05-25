@@ -18,9 +18,9 @@ const Filter = ({ handleYearChange, handleMonthChange, month, year }) => {
   ];
 
   return (
-    <div className="flex justify-evenly my-4 bg-white">
-      <div className="flex flex-col">
-        <label htmlFor="year" className="mb-2 text-lg font-semibold">
+    <div className="w-full max-w-xl mx-auto mt-4  overflow-hidden flex justify-around">
+      <div className="flex items-center">
+        <label htmlFor="year" className="mb-2 mr-4 text-lg font-semibold">
           Year
         </label>
         <select
@@ -36,8 +36,8 @@ const Filter = ({ handleYearChange, handleMonthChange, month, year }) => {
           ))}
         </select>
       </div>
-      <div className="flex flex-col">
-        <label htmlFor="month" className="mb-2 text-lg font-semibold">
+      <div className="flex items-center">
+        <label htmlFor="month" className="mb-2 mr-4 text-lg font-semibold">
           Month
         </label>
         <select
