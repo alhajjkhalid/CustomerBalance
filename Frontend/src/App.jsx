@@ -4,6 +4,7 @@ import viteLogo from "/vite.svg";
 import Filter from "./components/Filter";
 import transactions from "../src/assets/data";
 import Dashboard from "./components/Dashboard";
+import Balance from "./components/Balance";
 
 import "./App.css";
 
@@ -11,6 +12,7 @@ function App() {
   const [year, setYear] = useState("2022");
   const [month, setMonth] = useState("");
   const [filteredTransactions, setFilteredTransactions] = useState([]);
+  const [cumulative, setcumulative] = useState([]);
 
   useEffect(() => {
     const filtered = transactions.filter((transaction) => {
@@ -19,6 +21,18 @@ function App() {
       return transactionVar[0] === year && transactionVar[1] === month;
     });
     setFilteredTransactions(filtered);
+
+    const cumulativeFilter = transactions.filter((transaction) => {
+      const transactionVar = transaction.timestamp.split("-");
+
+      return (
+        parseInt(transactionVar[0]) < parseInt(year) ||
+        (parseInt(transactionVar[0]) === parseInt(year) &&
+          parseInt(transactionVar[1]) <= parseInt(month))
+      );
+    });
+
+    setcumulative(cumulativeFilter);
   }, [year, month]);
 
   const handleYearChange = (event) => {
@@ -26,7 +40,6 @@ function App() {
   };
 
   const handleMonthChange = (event) => {
-    console.log(event.target.value);
     setMonth(event.target.value);
   };
   return (
@@ -37,6 +50,10 @@ function App() {
           handleMonthChange={handleMonthChange}
         />
         <Dashboard transactions={filteredTransactions} />
+        <Balance
+          filteredTransactions={filteredTransactions}
+          cumulative={cumulative}
+        />
       </div>
     </>
   );
