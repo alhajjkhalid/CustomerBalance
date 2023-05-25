@@ -8,6 +8,9 @@ export default {
         "light-pink": "#fff3ee",
         "dark-pink": "#f5d3cc",
       },
+      fontFamily: {
+        sans: ["Roboto", "sans-serif"],
+      },
     },
   },
   plugins: [],

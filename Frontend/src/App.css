@@ -1,4 +1,7 @@
-@font-face {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+
+/* @font-face {
   font-family: "Nordea Sans Large Bold";
   src: url("//db.onlinewebfonts.com/t/095df2d8a2d98ea67750c993758df467.eot");
   src: url("//db.onlinewebfonts.com/t/095df2d8a2d98ea67750c993758df467.eot?#iefix")
@@ -15,4 +18,4 @@
 
 body {
     font-family: "Nordea Sans Large Bold", sans-serif;
-  }
+  } */

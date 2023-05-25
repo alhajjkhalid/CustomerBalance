@@ -13,10 +13,10 @@ const TransactionChart = ({ transactions }) => {
   });
 
   return (
-    <div className="w-full max-w-xl mx-auto mt-4 bg-white rounded-lg shadow-md overflow-hidden flex justify-center">
-      <BarChart width={400} height={400} data={data}>
+    <div className="w-full max-w-xl mx-auto mt-4 bg-white overflow-hidden flex justify-center">
+      <BarChart width={500} height={400} data={data}>
         <Bar dataKey="balance" fill="#00005e" />
-        <CartesianGrid stroke="#ccc" />
+        <CartesianGrid stroke="" />
         <XAxis dataKey="name" />
         <YAxis />
       </BarChart>
