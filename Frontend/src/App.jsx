@@ -1,3 +1,4 @@
+// App.jsx
 import React, { useState, useEffect } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
@@ -46,11 +47,18 @@ function App() {
   const handleMonthChange = (event) => {
     setMonth(event.target.value);
   };
+
   if (loading) {
     return <div>Loading...</div>;
   }
+
   return (
     <>
+      <div className="bg-dark-blue text-white text-center py-6 shadow-md mb-6">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold">
+          Transaction History
+        </h1>
+      </div>
       <div>
         <Filter
           handleYearChange={handleYearChange}
@@ -64,8 +72,10 @@ function App() {
           cumulative={cumulative}
         />
       </div>
-      <div className="">
-        <TransactionChart transactions={filteredTransactions} />
+      <div>
+        {filteredTransactions.length > 0 ? (
+          <TransactionChart transactions={filteredTransactions} />
+        ) : null}
       </div>
     </>
   );

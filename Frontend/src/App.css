@@ -1,0 +1,18 @@
+@font-face {
+  font-family: "Nordea Sans Large Bold";
+  src: url("//db.onlinewebfonts.com/t/095df2d8a2d98ea67750c993758df467.eot");
+  src: url("//db.onlinewebfonts.com/t/095df2d8a2d98ea67750c993758df467.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/095df2d8a2d98ea67750c993758df467.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/095df2d8a2d98ea67750c993758df467.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/095df2d8a2d98ea67750c993758df467.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/095df2d8a2d98ea67750c993758df467.svg#Nordea Sans Large Bold")
+      format("svg");
+}
+
+body {
+    font-family: "Nordea Sans Large Bold", sans-serif;
+  }
