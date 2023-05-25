@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const Dashboard = ({ transactions }) => {
   return (
     <>
@@ -20,28 +21,39 @@ const Dashboard = ({ transactions }) => {
               </tr>
             </thead>
             <tbody className="bg-white divide-y divide-gray-200">
-              {transactions.map((transaction, index) => {
-                return (
-                  <tr key={index}>
-                    <td className="px-6 py-4 whitespace-nowrap">
-                      <div className="text-sm text-gray-900">
-                        {transaction.timestamp}
-                      </div>
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap">
-                      <div
-                        className={`text-sm ${
-                          transaction.amount >= 0
-                            ? "text-green-600"
-                            : "text-red-600"
-                        }`}
-                      >
-                        {transaction.amount}
-                      </div>
-                    </td>
-                  </tr>
-                );
-              })}
+              {transactions.length === 0 ? (
+                <tr>
+                  <td
+                    colSpan="2"
+                    className="px-6 py-4 text-center text-sm text-gray-500"
+                  >
+                    No Transactions Available
+                  </td>
+                </tr>
+              ) : (
+                transactions.map((transaction, index) => {
+                  return (
+                    <tr key={index}>
+                      <td className="px-6 py-4 whitespace-nowrap">
+                        <div className="text-sm text-gray-900">
+                          {transaction.timestamp}
+                        </div>
+                      </td>
+                      <td className="px-6 py-4 whitespace-nowrap">
+                        <div
+                          className={`text-sm ${
+                            transaction.amount >= 0
+                              ? "text-green-600"
+                              : "text-red-600"
+                          }`}
+                        >
+                          {transaction.amount}
+                        </div>
+                      </td>
+                    </tr>
+                  );
+                })
+              )}
             </tbody>
           </table>
         </div>

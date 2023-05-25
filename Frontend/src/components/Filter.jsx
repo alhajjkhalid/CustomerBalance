@@ -1,6 +1,6 @@
 import React from "react";
 
-const Filter = ({ handleYearChange, handleMonthChange }) => {
+const Filter = ({ handleYearChange, handleMonthChange, month, year }) => {
   const years = ["2022", "2023"];
   const months = [
     { monthName: "January", month: 1 },
@@ -19,12 +19,13 @@ const Filter = ({ handleYearChange, handleMonthChange }) => {
 
   return (
     <>
-      <div className="flex justify-around my-4">
+      <div className="flex justify-evenly my-4">
         <div className="flex flex-col">
           <label htmlFor="year" className="mb-2">
             Year
           </label>
           <select
+            value={year}
             onChange={handleYearChange}
             id="year"
             className="py-2 px-4 rounded-lg shadow-md"
@@ -41,6 +42,7 @@ const Filter = ({ handleYearChange, handleMonthChange }) => {
             Month
           </label>
           <select
+            value={month}
             onChange={handleMonthChange}
             id="month"
             className="py-2 px-4 rounded-lg shadow-md"

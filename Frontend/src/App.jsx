@@ -5,6 +5,7 @@ import Filter from "./components/Filter";
 import transactions from "../src/assets/data";
 import Dashboard from "./components/Dashboard";
 import Balance from "./components/Balance";
+import TransactionChart from "./components/TransactionChart";
 
 import "./App.css";
 
@@ -13,8 +14,10 @@ function App() {
   const [month, setMonth] = useState("1");
   const [filteredTransactions, setFilteredTransactions] = useState([]);
   const [cumulative, setcumulative] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    setLoading(true);
     const filtered = transactions.filter((transaction) => {
       const transactionVar = transaction.timestamp.split("-");
 
@@ -33,6 +36,7 @@ function App() {
     });
 
     setcumulative(cumulativeFilter);
+    setLoading(false);
   }, [year, month]);
 
   const handleYearChange = (event) => {
@@ -42,18 +46,26 @@ function App() {
   const handleMonthChange = (event) => {
     setMonth(event.target.value);
   };
+  if (loading) {
+    return <div>Loading...</div>;
+  }
   return (
     <>
       <div>
         <Filter
           handleYearChange={handleYearChange}
           handleMonthChange={handleMonthChange}
+          month={month}
+          year={year}
         />
         <Dashboard transactions={filteredTransactions} />
         <Balance
           filteredTransactions={filteredTransactions}
           cumulative={cumulative}
         />
+      </div>
+      <div className="">
+        <TransactionChart transactions={filteredTransactions} />
       </div>
     </>
   );
