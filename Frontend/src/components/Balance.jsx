@@ -13,7 +13,7 @@ const Balance = ({ filteredTransactions, cumulative }) => {
 
   return (
     <div className="w-full max-w-xl mx-auto mt-4 bg-light-pink rounded-lg shadow-md overflow-hidden">
-      <div className="px-4 py-2">
+      <div className="px-4 py-2 border-b border-dark-blue">
         <h2 className="text-dark-blue text-3xl font-semibold">Balance</h2>
       </div>
       <div className="flex justify-around my-4">
