@@ -1,8 +1,8 @@
-// TransactionChart.jsx
+
 import { BarChart, Bar, CartesianGrid, XAxis, YAxis } from "recharts";
 
 const TransactionChart = ({ transactions }) => {
-  // Prepare your data
+  
   let cumulativeBalance = 0;
   const data = transactions.map((transaction, index) => {
     cumulativeBalance += transaction.amount;
