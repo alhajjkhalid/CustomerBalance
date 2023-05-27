@@ -8,10 +8,10 @@ const Dashboard = ({ transactions }) => {
           <table className="min-w-full divide-y divide-gray-200">
             <thead className="bg-dark-blue">
               <tr>
-                <th className="px-6 py-3 text-left text-xs text-white uppercase tracking-wider">
+                <th className="px-6 py-3 text-left text-md text-white uppercase tracking-wider font-semibold">
                   Date
                 </th>
-                <th className="px-6 py-3 text-left text-xs text-white uppercase tracking-wider">
+                <th className="px-6 py-3 text-left text-md text-white uppercase tracking-wider font-semibold">
                   Amount
                 </th>
               </tr>
@@ -36,11 +36,11 @@ const Dashboard = ({ transactions }) => {
                       }
                     >
                       <td className="px-6 py-4 whitespace-nowrap">
-                        <div className="text-sm text-gray-900">
+                        <div className="text-sm text-gray-900 font-semibold">
                           {transaction.timestamp}
                         </div>
                       </td>
-                      <td className="px-6 py-4 whitespace-nowrap">
+                      <td className="px-6 py-4 whitespace-nowrap font-bold">
                         <div
                           className={`text-sm ${
                             transaction.amount >= 0

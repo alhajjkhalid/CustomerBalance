@@ -9,7 +9,8 @@ export default {
         "dark-pink": "#f5d3cc",
       },
       fontFamily: {
-        sans: ["Roboto", "sans-serif"],
+        robotoFont: ["Roboto", "sans-serif"],
+        latoFont: ["Lato", "sans-serif"],
       },
     },
   },

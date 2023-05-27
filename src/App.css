@@ -1,21 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
-
-@font-face {
-  font-family: "Nordea Sans Large Bold";
-  src: url("//db.onlinewebfonts.com/t/095df2d8a2d98ea67750c993758df467.eot");
-  src: url("//db.onlinewebfonts.com/t/095df2d8a2d98ea67750c993758df467.eot?#iefix")
-      format("embedded-opentype"),
-    url("//db.onlinewebfonts.com/t/095df2d8a2d98ea67750c993758df467.woff2")
-      format("woff2"),
-    url("//db.onlinewebfonts.com/t/095df2d8a2d98ea67750c993758df467.woff")
-      format("woff"),
-    url("//db.onlinewebfonts.com/t/095df2d8a2d98ea67750c993758df467.ttf")
-      format("truetype"),
-    url("//db.onlinewebfonts.com/t/095df2d8a2d98ea67750c993758df467.svg#Nordea Sans Large Bold")
-      format("svg");
-}
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
 body {
-    font-family: "Nordea Sans Large Bold", sans-serif;
-  }
+  font-family: "Lato", sans-serif;
+}

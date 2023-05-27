@@ -23,19 +23,23 @@ const Balance = ({ filteredTransactions, cumulative }) => {
           </h3>
           <p
             className={`text-lg ${
-              monthlyBalance >= 0 ? "text-green-600" : "text-red-600"
+              monthlyBalance >= 0
+                ? "text-green-600 font-extrabold	"
+                : "text-red-600 font-extrabold	"
             }`}
           >
             {monthlyBalance}
           </p>
         </div>
         <div>
-          <h3 className="text-xl font-semibold text-dark-blue">
+          <h3 className="text-xl font-semibold text-dark-blue ">
             Cumulative Balance:
           </h3>
           <p
             className={`text-lg ${
-              cumulativeBalance >= 0 ? "text-green-600" : "text-red-600"
+              cumulativeBalance >= 0
+                ? "text-green-600 font-extrabold	"
+                : "text-red-600 font-extrabold	"
             }`}
           >
             {cumulativeBalance}

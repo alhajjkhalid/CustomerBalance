@@ -55,7 +55,7 @@ function App() {
   return (
     <>
       <div className="bg-dark-blue text-white text-center py-6 shadow-md mb-6">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold ">
           Transaction History
         </h1>
       </div>
